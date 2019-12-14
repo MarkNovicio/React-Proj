@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Control, LocalForm } from "react-redux-form";
+import { connect } from "react-redux";
 
 class Contact extends Component {
   constructor(props) {
@@ -105,13 +106,11 @@ class Contact extends Component {
                 </Label>
                 <Col md={10}>
                   <Control.text
+                    model=".lastName"
                     id="lastName"
                     name="lastName"
                     placeholder="Last Name"
-                    value={this.state.lastName}
-                    invalid={errors.lastName}
-                    onBlur={this.handleBlur("lastName")}
-                    onChange={this.handleInputChange}
+                    className="form-control"
                   />
                 </Col>
               </Row>
@@ -121,13 +120,11 @@ class Contact extends Component {
                 </Label>
                 <Col md={10}>
                   <Control.text
+                    model=".phoneNum"
                     id="phoneNum"
                     name="phoneNum"
                     placeholder="Phone number"
-                    value={this.state.phoneNum}
-                    invalid={errors.phoneNum}
-                    onBlur={this.handleBlur("phoneNum")}
-                    onChange={this.handleInputChange}
+                    className="form-control"
                   />
                 </Col>
               </Row>
@@ -137,13 +134,11 @@ class Contact extends Component {
                 </Label>
                 <Col md={10}>
                   <Control.text
+                    modal=".email"
                     id="email"
                     name="email"
                     placeholder="Email"
-                    value={this.state.email}
-                    invalid={errors.email}
-                    onBlur={this.handleBlur("email")}
-                    onChange={this.handleInputChange}
+                    className="form-control"
                   />
                 </Col>
               </Row>
@@ -152,7 +147,9 @@ class Contact extends Component {
                   <div className="form-check">
                     <Label check>
                       <Control.checkbox
+                        model=".agree"
                         name="agree"
+                        className="form-check-input"
                         checked={this.state.agree}
                         onChange={this.handleInputChange}
                       />{" "}
@@ -161,11 +158,7 @@ class Contact extends Component {
                   </div>
                 </Col>
                 <Col md={4}>
-                  <Control.select
-                    name="contactType"
-                    value={this.state.contactType}
-                    onChange={this.handleInputChange}
-                  >
+                  <Control.select model=".contactType" name="contactType">
                     <option>By Phone</option>
                     <option>By Email</option>
                   </Control.select>
@@ -177,11 +170,11 @@ class Contact extends Component {
                 </Label>
                 <Col md={10}>
                   <Control.textarea
+                    model=".feedback"
                     id="feedback"
                     name="feedback"
                     rows="12"
-                    value={this.state.feedback}
-                    onChange={this.handleInputChange}
+                    className="form-control"
                   />
                 </Col>
               </Row>

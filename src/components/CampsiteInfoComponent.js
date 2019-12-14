@@ -2,10 +2,8 @@ import React from "react";
 import {
   Card,
   CardImg,
-  CardImgOverlay,
   CardText,
   CardBody,
-  CardTitle,
   Breadcrumb,
   BreadcrumbItem
 } from "reactstrap";
