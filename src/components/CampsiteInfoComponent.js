@@ -17,8 +17,9 @@ import {
 import { Link } from "react-router-dom";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Loading } from "./LoadingComponent";
+import { baseUrl } from "../shared/baseUrl";
 
-//const required = val => val && val.length;
+const required = val => val && val.length;
 const maxLength = len => val => !val || val.length <= len;
 const minLength = len => val => val && val.length >= len;
 
@@ -49,16 +50,15 @@ class CommentForm extends Component {
 
   handleSubmit(values) {
     this.toggleModal();
-    this.props.addComment(
+    this.props.postComment(
       this.props.campsiteId,
       values.rating,
       values.author,
       values.text
     );
-    /*
+
     console.log("Current state is: " + JSON.stringify(values));
     alert("Current state is: " + JSON.stringify(values));
-    */
   }
 
   render() {
@@ -91,7 +91,7 @@ class CommentForm extends Component {
                     name="rating"
                     className="form-control fluid"
                     validators={{
-                      required: "Required"
+                      required
                     }}
                   >
                     <option>1</option>
@@ -113,7 +113,7 @@ class CommentForm extends Component {
                     name="author"
                     className="form-control"
                     validators={{
-                      required: "Required",
+                      required,
                       minLength: minLength(2),
                       maxLength: maxLength(15)
                     }}
@@ -124,7 +124,7 @@ class CommentForm extends Component {
                     show="touched"
                     component="div"
                     messages={{
-                      required: "Required",
+                      required,
                       minLength: "Must be at least 2 characters",
                       maxLength: "Must be 15 characters or less"
                     }}
@@ -160,7 +160,7 @@ function RenderCampsite({ campsite }) {
   return (
     <div className="col-md-5 m-1">
       <Card>
-        <CardImg top src={campsite.image} alt={campsite.name} />
+        <CardImg top src={baseUrl + campsite.image} alt={campsite.name} />
         <CardBody>
           <CardText>{campsite.description}</CardText>
         </CardBody>
@@ -169,7 +169,8 @@ function RenderCampsite({ campsite }) {
   );
 }
 
-function RenderComments({ comments, addComment, campsiteId }) {
+function RenderComments({ comments, postComment, campsiteId }) {
+  console.log("worksWORKSWOOORKS");
   if (comments) {
     return (
       <div className="col-md-5 m-1">
@@ -188,7 +189,7 @@ function RenderComments({ comments, addComment, campsiteId }) {
             </div>
           );
         })}
-        <CommentForm campsiteId={campsiteId} addComment={addComment} />
+        <CommentForm campsiteId={campsiteId} postComment={postComment} />
       </div>
     );
   }
@@ -235,7 +236,7 @@ function CampsiteInfo(props) {
           <RenderCampsite campsite={props.campsite} />
           <RenderComments
             comments={props.comments}
-            addComment={props.addComment}
+            postComment={props.postComment}
             campsiteId={props.campsite.id}
           />
         </div>
