@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Camp_NuCamp/static/css/main.288c3cdd.chunk.css",
-    "main.js": "/Camp_NuCamp/static/js/main.cf1d852b.chunk.js",
-    "main.js.map": "/Camp_NuCamp/static/js/main.cf1d852b.chunk.js.map",
-    "runtime-main.js": "/Camp_NuCamp/static/js/runtime-main.fc7eb36b.js",
-    "runtime-main.js.map": "/Camp_NuCamp/static/js/runtime-main.fc7eb36b.js.map",
-    "static/css/2.55c2f4f1.chunk.css": "/Camp_NuCamp/static/css/2.55c2f4f1.chunk.css",
-    "static/js/2.c55da4a8.chunk.js": "/Camp_NuCamp/static/js/2.c55da4a8.chunk.js",
-    "static/js/2.c55da4a8.chunk.js.map": "/Camp_NuCamp/static/js/2.c55da4a8.chunk.js.map",
-    "index.html": "/Camp_NuCamp/index.html",
-    "precache-manifest.20ce40954d6450e9ebb4af35d177fe11.js": "/Camp_NuCamp/precache-manifest.20ce40954d6450e9ebb4af35d177fe11.js",
-    "service-worker.js": "/Camp_NuCamp/service-worker.js",
-    "static/css/2.55c2f4f1.chunk.css.map": "/Camp_NuCamp/static/css/2.55c2f4f1.chunk.css.map",
-    "static/css/main.288c3cdd.chunk.css.map": "/Camp_NuCamp/static/css/main.288c3cdd.chunk.css.map",
-    "static/media/font-awesome.css": "/Camp_NuCamp/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/index.css": "/Camp_NuCamp/static/media/open-sans-latin-800italic.c62c3eea.woff2"
+    "main.css": "/React-Proj/static/css/main.288c3cdd.chunk.css",
+    "main.js": "/React-Proj/static/js/main.b96e19d3.chunk.js",
+    "main.js.map": "/React-Proj/static/js/main.b96e19d3.chunk.js.map",
+    "runtime-main.js": "/React-Proj/static/js/runtime-main.2eab37bf.js",
+    "runtime-main.js.map": "/React-Proj/static/js/runtime-main.2eab37bf.js.map",
+    "static/css/2.17cb6dab.chunk.css": "/React-Proj/static/css/2.17cb6dab.chunk.css",
+    "static/js/2.c55da4a8.chunk.js": "/React-Proj/static/js/2.c55da4a8.chunk.js",
+    "static/js/2.c55da4a8.chunk.js.map": "/React-Proj/static/js/2.c55da4a8.chunk.js.map",
+    "index.html": "/React-Proj/index.html",
+    "precache-manifest.c426774aa6b7b808e6d302ff706dfa4e.js": "/React-Proj/precache-manifest.c426774aa6b7b808e6d302ff706dfa4e.js",
+    "service-worker.js": "/React-Proj/service-worker.js",
+    "static/css/2.17cb6dab.chunk.css.map": "/React-Proj/static/css/2.17cb6dab.chunk.css.map",
+    "static/css/main.288c3cdd.chunk.css.map": "/React-Proj/static/css/main.288c3cdd.chunk.css.map",
+    "static/media/font-awesome.css": "/React-Proj/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/index.css": "/React-Proj/static/media/open-sans-latin-800italic.c62c3eea.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.fc7eb36b.js",
-    "static/css/2.55c2f4f1.chunk.css",
+    "static/js/runtime-main.2eab37bf.js",
+    "static/css/2.17cb6dab.chunk.css",
     "static/js/2.c55da4a8.chunk.js",
     "static/css/main.288c3cdd.chunk.css",
-    "static/js/main.cf1d852b.chunk.js"
+    "static/js/main.b96e19d3.chunk.js"
   ]
 }
